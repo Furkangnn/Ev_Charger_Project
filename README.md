@@ -13,14 +13,6 @@ Backend development for the operations platform, with ownership of:
 - HTTP APIs used by the driver portal and the operator console
 - Payment and prepaid-balance integration around a charging session
 
-## Platform in brief
-
-Drivers find a charger, authorize a session, and follow energy and cost while the vehicle charges. Operators see which charge points are online, which connectors are busy, and how sessions settle.
-
-Charge points speak **OCPP 1.6J** over a persistent **WebSocket**. The central system is a **.NET** backend with **SQL Server** as the system of record. The portals call a **REST** API. Live session state is pushed to connected browsers with **SignalR**, so the UI does not poll for meter updates. Payments are handled through a prepaid balance: the driver tops up through a hosted payment page, a session reserves balance up front, and unused balance is released when the session ends.
-
-The same backend model supports many charge points, more than one connector per charge point, and more than one market, with tariffs and payment options that differ by country.
-
 ## Documents
 
 | Document | What it covers |
