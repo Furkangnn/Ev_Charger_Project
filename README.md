@@ -33,12 +33,16 @@ flowchart LR
     Operator[Operator console]
   end
 
-  subgraph backend [.NET backend]
-    API[REST API]
-    Sessions[Session service]
-    Billing[Billing and wallet]
-    Hub[SignalR hub]
-    Ocpp[OCPP 1.6J gateway]
+  subgraph runtime [Docker]
+    subgraph backend [.NET services]
+      API[REST API]
+      Sessions[Session service]
+      Billing[Billing and wallet]
+      Hub[SignalR hub]
+      Ocpp[OCPP 1.6J gateway]
+    end
+    Kafka[(Kafka)]
+    Redis[(Redis)]
   end
 
   CP[Charge points]
@@ -49,16 +53,23 @@ flowchart LR
   Operator --> API
   API --> Sessions
   API --> Billing
+  CP <-->|WebSocket| Ocpp
+  Ocpp --> Kafka
+  Kafka --> Sessions
+  Kafka --> Billing
+  Kafka --> Hub
+  Sessions --> Redis
+  Hub --> Redis
   Sessions --> DB
   Billing --> DB
   Billing --> Pay
-  CP <-->|WebSocket| Ocpp
-  Ocpp --> Sessions
-  Sessions --> Hub
-  Ocpp --> Hub
   Hub --> Driver
   Hub --> Operator
 ```
+
+- Docker runs the .NET services as separate containers.
+- Kafka carries charger and session events from the gateway to billing and the live hub.
+- Redis holds the latest connector and session state so SignalR does not read SQL Server for every meter sample.
 
 Remote start and remote stop:
 

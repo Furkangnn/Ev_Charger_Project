@@ -14,6 +14,9 @@ Simplified view of the EV charging operations platform. Component names below de
 | Billing and wallet | Prepaid balance, top-up confirmation, reservation at start, settlement at stop, refund when energy was not delivered |
 | SignalR hub | Pushes connector status and in-progress meter readings to browsers that are allowed to see that session |
 | SQL Server | System of record for users, charge points, sessions, meter snapshots, and ledger entries |
+| Kafka | Event log between the gateway and the rest of the backend. Meter samples, start, and stop are published once and consumed by session, billing, and the live hub |
+| Redis | Hot store for the latest connector status and in-progress session view. Also the backplane when more than one SignalR instance is running |
+| Docker | Packages each .NET service so the gateway, API, session, billing, and hub can be deployed and scaled on their own |
 | Payment provider | Hosted payment page. The backend never handles raw card data |
 | Charge point | AC or DC charger. Opens the WebSocket outbound. Executes start and stop locally and reports meter values |
 
@@ -26,12 +29,16 @@ flowchart LR
     Operator[Operator console]
   end
 
-  subgraph backend [.NET backend]
-    API[REST API]
-    Sessions[Session service]
-    Billing[Billing and wallet]
-    Hub[SignalR hub]
-    Ocpp[OCPP 1.6J gateway]
+  subgraph runtime [Docker]
+    subgraph backend [.NET services]
+      API[REST API]
+      Sessions[Session service]
+      Billing[Billing and wallet]
+      Hub[SignalR hub]
+      Ocpp[OCPP 1.6J gateway]
+    end
+    Kafka[(Kafka)]
+    Redis[(Redis)]
   end
 
   CP[Charge points]
@@ -42,13 +49,16 @@ flowchart LR
   Operator --> API
   API --> Sessions
   API --> Billing
+  CP <-->|WebSocket| Ocpp
+  Ocpp --> Kafka
+  Kafka --> Sessions
+  Kafka --> Billing
+  Kafka --> Hub
+  Sessions --> Redis
+  Hub --> Redis
   Sessions --> DB
   Billing --> DB
   Billing --> Pay
-  CP <-->|WebSocket| Ocpp
-  Ocpp --> Sessions
-  Sessions --> Hub
-  Ocpp --> Hub
   Hub --> Driver
   Hub --> Operator
 ```
@@ -74,8 +84,8 @@ That split keeps protocol code replaceable. OCPP 1.6J is the protocol in product
 Two real-time paths run at once during a session.
 
 - The charger streams meter values over its WebSocket.
-- The gateway records the sample and notifies the session service.
-- The session service publishes a small view model on SignalR: energy so far, instantaneous power when the charger sent it, elapsed time, and estimated cost.
+- The gateway publishes the sample on Kafka. Session, billing, and the hub consume that stream instead of calling each other directly.
+- Redis keeps the latest sample. SignalR reads it and pushes energy so far, instantaneous power, elapsed time, and estimated cost.
 - The driver portal and the operator console subscribe only to sessions they are allowed to see.
 
 The REST API remains the source for anything that must be durable: the session record, the final cost, and the ledger entry. SignalR is a cache of the latest sample, not the ledger.
