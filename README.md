@@ -1,6 +1,6 @@
 # EV Charging Operations Platform
 
-**Portfolio case study.** This repository documents the backend of an electric-vehicle charging platform used to operate chargers in Singapore and Malaysia. It is a simplified public write-up for recruiters and backend engineering roles.
+I built the backend of an EV charging platform that runs chargers in Singapore and Malaysia. A driver starts a session in the portal, the charge point executes it over OCPP 1.6J on a persistent WebSocket, and the operator console follows connector status, energy, and cost as they change. The stack is .NET, SQL Server, REST, and SignalR. My part was the real-time command path, the charging-session lifecycle, the APIs, and the prepaid payment flow that reserves balance at the start and settles it from the meter when the session stops.
 
 This is not a source-code repository. It does not contain production code, infrastructure configuration, secrets, customer data, charger identifiers, or internal business rules.
 
