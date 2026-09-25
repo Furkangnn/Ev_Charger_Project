@@ -76,41 +76,49 @@ The gallery below is the original set of product photographs, plus a live socket
 
 These photographs are the originals. They show the product as it was captured, including account and site details visible on screen.
 
-Application screens come first. Field photos of the charger are at the end.
+### Driver application
 
-<p>
-<img alt="Driver home" src="docs/images/01-driver-home.jpeg" width="220">
-<img alt="Station list" src="docs/images/02-driver-stations.jpeg" width="220">
-<img alt="Station detail with start" src="docs/images/03-driver-station-detail.jpeg" width="220">
-</p>
+<table>
+<tr>
+<td><img alt="Driver home" src="docs/images/01-driver-home.jpeg" width="200"></td>
+<td><img alt="Station list" src="docs/images/02-driver-stations.jpeg" width="200"></td>
+<td><img alt="Station detail" src="docs/images/03-driver-station-detail.jpeg" width="200"></td>
+</tr>
+<tr>
+<td><img alt="Session history" src="docs/images/04-driver-history.jpeg" width="200"></td>
+<td><img alt="Wallet" src="docs/images/05-driver-wallet.jpeg" width="200"></td>
+</tr>
+<tr>
+<td><img alt="Charge form" src="docs/images/07-test-start-form.png" width="200"></td>
+<td><img alt="Live charging session" src="docs/images/08-test-charging.png" width="200"></td>
+</tr>
+</table>
 
-<p>
-<img alt="Session history" src="docs/images/04-driver-history.jpeg" width="220">
-<img alt="Wallet and payment methods" src="docs/images/05-driver-wallet.jpeg" width="220">
-<img alt="Test session form after the simulator reported the cable connected" src="docs/images/07-test-start-form.png" width="220">
-</p>
+### Operator console
 
-<p>
-<img alt="Live session while meter values were arriving" src="docs/images/08-test-charging.png" width="280">
-<img alt="Settled session in the operator console" src="docs/images/09-test-session-settled.png" width="420">
-</p>
+<table>
+<tr>
+<td><img alt="Session settled" src="docs/images/09-test-session-settled.png" width="360"></td>
+<td><img alt="Station list" src="docs/images/10-admin-stations.png" width="360"></td>
+</tr>
+<tr>
+<td colspan="2"><img alt="Station map" src="docs/images/11-admin-map.png" width="720"></td>
+</tr>
+</table>
 
-<p>
-<img alt="Admin station list with one charger online" src="docs/images/10-admin-stations.png" width="480">
-<img alt="Admin map with the online charger and an offline charger" src="docs/images/11-admin-map.png" width="480">
-</p>
+### Desktop portal
 
-<p>
-<img alt="Driver portal home" src="docs/images/driver-portal-home.png" width="320">
-<img alt="Scan required before a session" src="docs/images/driver-scan.png" width="320">
-<img alt="Prepaid top-up" src="docs/images/driver-topup.png" width="320">
-</p>
+<table>
+<tr>
+<td><img alt="Portal home" src="docs/images/driver-portal-home.png" width="240"></td>
+<td><img alt="Scan required" src="docs/images/driver-scan.png" width="240"></td>
+<td><img alt="Top up" src="docs/images/driver-topup.png" width="240"></td>
+</tr>
+</table>
 
-The charger on site:
+### Charger on site
 
-<p>
-<img alt="AC charger used for the socket test" src="docs/images/field-charger.jpeg" width="280">
-</p>
+<img alt="AC charger used for the socket test" src="docs/images/field-charger.jpeg" width="220">
 
 ## What was hard about the backend
 
