@@ -76,33 +76,41 @@ The gallery below is the original set of product photographs, plus a live socket
 
 These photographs are the originals. They show the product as it was captured, including account and site details visible on screen.
 
-![AC charger used for the socket test](docs/images/field-charger.jpeg)
+<img alt="AC charger used for the socket test" src="docs/images/field-charger.jpeg" width="280">
 
-![Driver home](docs/images/01-driver-home.jpeg)
+<img alt="Driver home" src="docs/images/01-driver-home.jpeg" width="280">
 
-![Station list](docs/images/02-driver-stations.jpeg)
+<img alt="Station list" src="docs/images/02-driver-stations.jpeg" width="280">
 
-![Station detail with start](docs/images/03-driver-station-detail.jpeg)
+<img alt="Station detail with start" src="docs/images/03-driver-station-detail.jpeg" width="280">
 
-![Session history](docs/images/04-driver-history.jpeg)
+<img alt="Session history" src="docs/images/04-driver-history.jpeg" width="280">
 
-![Wallet and payment methods](docs/images/05-driver-wallet.jpeg)
+<img alt="Wallet and payment methods" src="docs/images/05-driver-wallet.jpeg" width="280">
 
-![Operator charge-point list](docs/images/06-operator-chargers.jpeg)
+<img alt="Operator charge-point list" src="docs/images/06-operator-chargers.jpeg" width="280">
 
-![Test session form after the simulator reported the cable connected](docs/images/07-test-start-form.png)
+<img alt="Test session form after the simulator reported the cable connected" src="docs/images/07-test-start-form.png" width="320">
 
-![Live session while meter values were arriving](docs/images/08-test-charging.png)
+<img alt="Live session while meter values were arriving" src="docs/images/08-test-charging.png" width="320">
 
-![Settled session in the operator console](docs/images/09-test-session-settled.png)
+<img alt="Settled session in the operator console" src="docs/images/09-test-session-settled.png" width="640">
+
+Operator console, station list. One charger was online during the socket test; the other stayed offline.
+
+<img alt="Admin station list with one charger online" src="docs/images/10-admin-stations.png" width="640">
+
+Operator map. The blue pin is the charger that was online for the test. The gray pin is an offline charger. The test charger has no saved location of its own, so a temporary map pin was set for this screenshot and removed afterward.
+
+<img alt="Admin map with the online charger and an offline charger" src="docs/images/11-admin-map.png" width="640">
 
 Desktop views of the same driver portal, with the account name removed:
 
-![Driver portal home](docs/images/driver-portal-home.png)
+<img alt="Driver portal home" src="docs/images/driver-portal-home.png" width="640">
 
-![Scan required before a session](docs/images/driver-scan.png)
+<img alt="Scan required before a session" src="docs/images/driver-scan.png" width="640">
 
-![Prepaid top-up](docs/images/driver-topup.png)
+<img alt="Prepaid top-up" src="docs/images/driver-topup.png" width="640">
 
 ## What was hard about the backend
 
