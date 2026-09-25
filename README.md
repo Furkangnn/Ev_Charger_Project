@@ -15,12 +15,14 @@ Backend development for the operations platform, with ownership of:
 
 ## Documents
 
-| Document | What it covers |
-| --- | --- |
-| [Architecture](docs/architecture.md) | Components, trust boundaries, and how live state reaches the UI |
-| [OCPP command flow](docs/ocpp-flow.md) | Remote start and remote stop, including the sequence diagrams |
-| [Payment flow](docs/payment-flow.md) | Top-up, reservation, settlement, and refund |
-| [API overview](docs/api-overview.md) | Simplified resource model for drivers and operators |
+- [Architecture](docs/architecture.md)
+  - Components, trust boundaries, and how live state reaches the UI
+- [OCPP command flow](docs/ocpp-flow.md)
+  - Remote start and remote stop, including the sequence diagrams
+- [Payment flow](docs/payment-flow.md)
+  - Top-up, reservation, settlement, and refund
+- [API overview](docs/api-overview.md)
+  - Simplified resource model for drivers and operators
 
 ## System shape
 
@@ -58,7 +60,9 @@ flowchart LR
   Hub --> Operator
 ```
 
-Remote start and remote stop are specified in [docs/ocpp-flow.md](docs/ocpp-flow.md).
+Remote start and remote stop:
+
+- [OCPP command flow](docs/ocpp-flow.md)
 
 ## What a driver sees
 
