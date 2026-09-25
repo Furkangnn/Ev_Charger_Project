@@ -100,7 +100,7 @@ Operator console, station list. One charger was online during the socket test; t
 
 <img alt="Admin station list with one charger online" src="docs/images/10-admin-stations.png" width="640">
 
-Operator map. The blue pin is the charger that was online for the test. The gray pin is an offline charger. The test charger has no saved location of its own, so a temporary map pin was set for this screenshot and removed afterward.
+Operator map, zoomed out so both chargers sit in frame. The blue pin is the charger that was online for the test. The gray pin is an offline charger. The test charger has no saved location of its own, so a temporary map pin was set for this screenshot and removed afterward.
 
 <img alt="Admin map with the online charger and an offline charger" src="docs/images/11-admin-map.png" width="640">
 
