@@ -72,15 +72,37 @@ Remote start and remote stop are specified in [docs/ocpp-flow.md](docs/ocpp-flow
 
 The driver portal is deliberately small. A session starts only after the charger is identified, typically by scanning the code on the unit. Balance is held as tokens. Top-up sends the driver to a hosted payment page and credits the balance after the provider confirms payment.
 
-Screenshots below are from the driver portal and from a field AC charger used during development. Account names and any site identifiers have been removed. Phone photos of the same product were used to understand the operator and history screens, and were not published: they contained personal data and site identifiers.
+The gallery below is the original set of product photographs, plus a live socket test. A small OCPP 1.6J simulator stood in for a home charger: it accepted remote start, reported meter values, and accepted remote stop. The session settled at 0.11 kWh against a 0.10 token hold. The simulator was disconnected after the stop, so it did not stay online.
 
-![Driver portal home, asking for a charger code before a session can start](docs/images/driver-portal-home.png)
+These photographs are the originals. They show the product as it was captured, including account and site details visible on screen.
 
-![Charger selection requires a scan before start or stop is available](docs/images/driver-scan.png)
+![AC charger used for the socket test](docs/images/field-charger.jpeg)
 
-![Prepaid top-up. Payment itself happens on the provider's hosted page](docs/images/driver-topup.png)
+![Driver home](docs/images/01-driver-home.jpeg)
 
-![AC charger used to exercise the OCPP connection during development](docs/images/field-ac-charger.png)
+![Station list](docs/images/02-driver-stations.jpeg)
+
+![Station detail with start](docs/images/03-driver-station-detail.jpeg)
+
+![Session history](docs/images/04-driver-history.jpeg)
+
+![Wallet and payment methods](docs/images/05-driver-wallet.jpeg)
+
+![Operator charge-point list](docs/images/06-operator-chargers.jpeg)
+
+![Test session form after the simulator reported the cable connected](docs/images/07-test-start-form.png)
+
+![Live session while meter values were arriving](docs/images/08-test-charging.png)
+
+![Settled session in the operator console](docs/images/09-test-session-settled.png)
+
+Desktop views of the same driver portal, with the account name removed:
+
+![Driver portal home](docs/images/driver-portal-home.png)
+
+![Scan required before a session](docs/images/driver-scan.png)
+
+![Prepaid top-up](docs/images/driver-topup.png)
 
 ## What was hard about the backend
 
