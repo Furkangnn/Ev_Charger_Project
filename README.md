@@ -76,41 +76,41 @@ The gallery below is the original set of product photographs, plus a live socket
 
 These photographs are the originals. They show the product as it was captured, including account and site details visible on screen.
 
+Application screens come first. Field photos of the charger are at the end.
+
+<p>
+<img alt="Driver home" src="docs/images/01-driver-home.jpeg" width="220">
+<img alt="Station list" src="docs/images/02-driver-stations.jpeg" width="220">
+<img alt="Station detail with start" src="docs/images/03-driver-station-detail.jpeg" width="220">
+</p>
+
+<p>
+<img alt="Session history" src="docs/images/04-driver-history.jpeg" width="220">
+<img alt="Wallet and payment methods" src="docs/images/05-driver-wallet.jpeg" width="220">
+<img alt="Test session form after the simulator reported the cable connected" src="docs/images/07-test-start-form.png" width="220">
+</p>
+
+<p>
+<img alt="Live session while meter values were arriving" src="docs/images/08-test-charging.png" width="280">
+<img alt="Settled session in the operator console" src="docs/images/09-test-session-settled.png" width="420">
+</p>
+
+<p>
+<img alt="Admin station list with one charger online" src="docs/images/10-admin-stations.png" width="480">
+<img alt="Admin map with the online charger and an offline charger" src="docs/images/11-admin-map.png" width="480">
+</p>
+
+<p>
+<img alt="Driver portal home" src="docs/images/driver-portal-home.png" width="320">
+<img alt="Scan required before a session" src="docs/images/driver-scan.png" width="320">
+<img alt="Prepaid top-up" src="docs/images/driver-topup.png" width="320">
+</p>
+
+The charger on site:
+
+<p>
 <img alt="AC charger used for the socket test" src="docs/images/field-charger.jpeg" width="280">
-
-<img alt="Driver home" src="docs/images/01-driver-home.jpeg" width="280">
-
-<img alt="Station list" src="docs/images/02-driver-stations.jpeg" width="280">
-
-<img alt="Station detail with start" src="docs/images/03-driver-station-detail.jpeg" width="280">
-
-<img alt="Session history" src="docs/images/04-driver-history.jpeg" width="280">
-
-<img alt="Wallet and payment methods" src="docs/images/05-driver-wallet.jpeg" width="280">
-
-<img alt="Operator charge-point list" src="docs/images/06-operator-chargers.jpeg" width="280">
-
-<img alt="Test session form after the simulator reported the cable connected" src="docs/images/07-test-start-form.png" width="320">
-
-<img alt="Live session while meter values were arriving" src="docs/images/08-test-charging.png" width="320">
-
-<img alt="Settled session in the operator console" src="docs/images/09-test-session-settled.png" width="640">
-
-Operator console, station list. One charger was online during the socket test; the other stayed offline.
-
-<img alt="Admin station list with one charger online" src="docs/images/10-admin-stations.png" width="640">
-
-Operator map, zoomed out so both chargers sit in frame. The blue pin is the charger that was online for the test. The gray pin is an offline charger. The test charger has no saved location of its own, so a temporary map pin was set for this screenshot and removed afterward.
-
-<img alt="Admin map with the online charger and an offline charger" src="docs/images/11-admin-map.png" width="640">
-
-Desktop views of the same driver portal, with the account name removed:
-
-<img alt="Driver portal home" src="docs/images/driver-portal-home.png" width="640">
-
-<img alt="Scan required before a session" src="docs/images/driver-scan.png" width="640">
-
-<img alt="Prepaid top-up" src="docs/images/driver-topup.png" width="640">
+</p>
 
 ## What was hard about the backend
 
