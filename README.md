@@ -157,4 +157,3 @@ The diagrams and API sketch in `docs/` are a teaching view of the design. They a
 - Hosted payment page for prepaid top-up
 - Multi-charge-point operations across Singapore and Malaysia
 
-- 
